@@ -2,6 +2,7 @@ const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
 const compression = require("compression");
+const path = require("path");
 // updated port
 const PORT = process.env.PORT || 3000;
 
@@ -13,7 +14,8 @@ app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("public"));
+// Expose public directory to client side
+app.use(express.static(path.join(__dirname, 'public')));
 
 // updated heroku connection
 mongoose.connect(
