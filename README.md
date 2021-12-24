@@ -31,7 +31,6 @@ THEN that will be shown on the page, and added to their transaction history when
 
 - - -
 
-##deployed app 
 
   * [deployed app](https://desolate-temple-51047.herokuapp.com/)
 
